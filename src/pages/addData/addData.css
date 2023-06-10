@@ -1,0 +1,107 @@
+.add-data__container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+}
+
+.add-data__title {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.add-data__title p {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.add-data__personal-details {
+  padding: 20px;
+}
+
+.section-title p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.add-data-section__title {
+  color: rgb(130, 139, 162);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.add-data__profile-summary {
+  padding: 20px;
+}
+
+.add-data__education {
+  padding: 20px;
+}
+
+.add-data__skill {
+  padding: 20px;
+}
+
+.add-data__working-experience {
+  padding: 20px;
+}
+
+.add-data__organization-experience {
+  padding: 20px;
+}
+
+.add-data__languages {
+  padding: 20px;
+}
+
+.add-data__button {
+  padding-left: 20px;
+  display: flex;
+}
+
+.submit-button {
+  margin-right: 30px;
+}
+
+.add-button {
+  margin-top: 8px;
+}
+
+.delete-button {
+  cursor: pointer;
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-button__text {
+  color: #464646;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.accordion-text__detail {
+  color: rgb(130, 139, 162);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.add-data__accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.row {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,648 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-marusong",
+      "author": "bambangde"
+    },
+    {
+      "id": 3,
+      "title": "wakwaw gimank",
+      "author": "julio"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "personalDetails": [
+    {
+      "jobTitle": "Front End Developer",
+      "firstName": "Rafi Naufal",
+      "lastName": "Akbar",
+      "email": "rafinaufal34@gmail.com",
+      "phone": "081298078744",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Hastuti Townhouse, Jl. Keang Risin II No.116B RT 02/01, Legoso, Pisangan, Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "10 Juli 1998",
+      "profileSummary": "I am an adaptive and fast learner individual, who has a high interest in expanding my experience in a learning environment. I am good in maintain relationship with people and terrific on working with a team. I am also accustomed to work on an extensive, high-pressure, and demanding task from which I acquired from my education and experiences. I am willing to learn more to develop myself to enhance my skills and abilities.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Mechanical Engineering",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA : 3.58 / 4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "Leadership",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [
+        {
+          "jobTitle": "Quality Assurance Junior Specialist",
+          "employer": "PT. Hyundai Motor Manufacturing Indonesia",
+          "startDate": "April 2021",
+          "endDate": "May 2022",
+          "city": "Bekasi",
+          "description": "In charge of vehicle electrical problem and market claim."
+        }
+      ],
+      "organizationExperience": [
+        {
+          "jobTitle": "Vice Head",
+          "department": "Human Resource and Development Department",
+          "startDate": "January 2018",
+          "endDate": "December 2018",
+          "organizationName": "Ikatan Mahasiswa Mesin 2018",
+          "description": "Ikatan Mahasiswa Mesin FT UI is one of non - profit organization in Department of Mechanical Engineering at University of Indonesia. This division is responsible to provide the fresh graduate student from high school to be able to adapt in campus life, especially in the mechanical engineering department. In the other hand, we provide the last year student to prepared for their work life after graduate from University."
+        },
+        {
+          "jobTitle": "Staff",
+          "department": "Human Resource and Development Department",
+          "startDate": "January 2017",
+          "endDate": "December 2017",
+          "organizationName": "Badan Eksekutif Mahasiswa FTUI 2017",
+          "description": "Badan Eksekutif Mahasiswa FT UI is one of the non - profit organization in Faculty of Engineering, University of Indonesia. This division is responsible to provide the fresh graduate student from high school to be able to adapt in campus life, especially in the faculty of engineering. In the other hand, we provide the last year student to prepared for their work life after graduate from University."
+        }
+      ],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Highly Proficient"
+        }
+      ],
+      "id": 1659086668581
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Aldin",
+      "lastName": "Binandika",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 1659272873762
+    },
+    {
+      "jobTitle": "Machine Learning Engineer",
+      "firstName": "Muhammad",
+      "lastName": "Thareqky",
+      "email": "thareqky@gmail.com",
+      "phone": "0812466590",
+      "country": "Indonesia",
+      "city": "Jakarta Utara",
+      "address": "Jl. Gading VII No.D7, Kelapa Gading Barat",
+      "postalCode": "14240",
+      "birthPlace": "Bekasi",
+      "birthDate": "10 September 1998",
+      "profileSummary": "Receptionist with over 5 years' experience working in both the public and private sectors. Diplomatic, personable, and adept at managing sensitive situations. Highly organized, self-motivated, and proficient with computers. Looking to boost students’ satisfactions scores for ABC University. Bachelor's degree in communications.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Mechanical Engineering",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 3.23/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Python",
+          "level": "Skillful"
+        },
+        {
+          "skill": "SQL",
+          "level": "Skillful"
+        },
+        {
+          "skill": "Tableau",
+          "level": "Beginner"
+        }
+      ],
+      "workExperience": [
+        {
+          "jobTitle": "Research Assistant",
+          "employer": "DTM FTUI",
+          "startDate": "July 2020",
+          "endDate": "December 2020",
+          "city": "Jakarta",
+          "description": "Detail-oriented Civil Engineer and PE with 5 years of experience and a zest for solving complex problems. Seeking to use proven project management and design skills to improve quality, cost and time metrics for NEP Engineering."
+        }
+      ],
+      "organizationExperience": [
+        {
+          "jobTitle": "Head",
+          "department": "Operational Department",
+          "startDate": "January 2019",
+          "endDate": "December 2019",
+          "organizationName": "Olimpiade UI 2019",
+          "description": "Experienced PMP with a background in law and 7+ years experience growing revenue for a Massachusetts-based electronics firm. Seeking to leverage leadership expertise as project manager for Paylocity. Guest speaker at the Northeast Lean Conference in 2014."
+        },
+        {
+          "jobTitle": "Head",
+          "department": "Support Department",
+          "startDate": "January 2018",
+          "endDate": "December 2018",
+          "organizationName": "Universiade UI 2018",
+          "description": "But if you’d rather skip these and get straight to the resume summary examples for 25+ professions, you can simply click on the industry in the table of contents below."
+        }
+      ],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Highly Proficient"
+        },
+        {
+          "language": "Russian",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 1659351675483
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Waro",
+      "lastName": "Barokah",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Ferdi",
+      "lastName": "Rulli",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Saya",
+      "lastName": "Player",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Gregory",
+      "lastName": "Parto",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Mardi",
+      "lastName": "Boom",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Sony",
+      "lastName": "Wakwaw",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Maman",
+      "lastName": "Mamad",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "jobTitle": "Data Analyst",
+      "firstName": "Marno",
+      "lastName": "Supar",
+      "email": "aldin.binandika@gmail.com",
+      "phone": "081247426450",
+      "country": "Indonesia",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Raya Cirendeu No.46, Pisangan, Kecamatan Ciputat Timur",
+      "postalCode": "15419",
+      "birthPlace": "Jakarta",
+      "birthDate": "25 Mei 1998",
+      "profileSummary": "MBA (university topper and gold medallist) with seven years of experience in budgeting, forecasting and financial modelling. Promoted from quality assurance manager to a business analyst within two years. Used forecasting model with variance analysis to recommend changes in the production plan and sale of three products to reduce overheads by 43%. Achieved the certificate of merit for outstanding performance.",
+      "education": [
+        {
+          "school": "Universitas Indonesia",
+          "degree": "Civil Engineer",
+          "startDate": "2016",
+          "endDate": "2020",
+          "city": "Jakarta",
+          "description": "GPA: 4.00/4.00"
+        }
+      ],
+      "skills": [
+        {
+          "skill": "Communication",
+          "level": "Experienced"
+        },
+        {
+          "skill": "Teamwork",
+          "level": "Expert"
+        },
+        {
+          "skill": "AutoCAD",
+          "level": "Experienced"
+        }
+      ],
+      "workExperience": [],
+      "organizationExperience": [],
+      "languages": [
+        {
+          "language": "Indonesian",
+          "level": "Native Speaker"
+        },
+        {
+          "language": "English",
+          "level": "Very Good Command"
+        }
+      ],
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+.data-preview__container {
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.data-preview__header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.data-preview__name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.data-preview__job-title {
+  font-size: 20px;
+  color: rgb(130, 139, 162);
+}
+
+.data-preview__content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.data-preview__section {
+  margin-bottom: 25px;
+}
+
+.data-preview__section-title {
+  font-size: 25px;
+  color: rgb(26, 145, 240);
+  margin-bottom: 15px;
+}
+
+.data-preview__description {
+  font-size: 14px;
+  color: rgb(130, 139, 162);
+}
+
+.data-preview__section-detail {
+  margin-bottom: 15px;
+}
+
+.data-preview__desc-title {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 3px;
+}
+
+.data-preview__level {
+  margin-bottom: 15px;
+}
+
+.data-preview__right-section-title {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 3px;
+}
+
+.data-preview__start-end-date {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.data-preview__section-content {
+  margin-bottom: 10px;
+}
+
+.download-button {
+  width: 1000px;
+  margin: auto;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
