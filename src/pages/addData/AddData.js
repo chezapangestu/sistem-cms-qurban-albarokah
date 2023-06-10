@@ -228,7 +228,7 @@ const AddData = ({ isEdit }) => {
             colorScheme="blue"
             className="submit-button"
           >
-            Tambahkan
+            Submit
           </Button>
           <Button
             onClick={() => navigate(`/`)}

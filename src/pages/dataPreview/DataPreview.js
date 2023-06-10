@@ -47,13 +47,32 @@ const DataPreview = () => {
       {data && (
         <>
           <div className="data-preview__container" id="dataPrint">
+            <div className="data-preview__title">
+              <p>Data Shohibul Qurban</p>
+            </div>
             <div className="data-preview__header">
-              <p className="data-preview__name">
-                Nama: {data.firstName} {data.lastName}
-              </p>
-              <p className="data-preview__name">Blok Rumah: {data.blokRumah}</p>
-              <p className="data-preview__name">No Handphone: {data.phone}</p>
-              <p className="data-preview__name">Hewan: {data.hewan}</p>
+              <div className="data-preview__item">
+                <label className="data-preview__label">
+                  Nama Shohibul Qurban:
+                </label>
+                <p className="data-preview__name">
+                  {data.firstName} {data.lastName}
+                </p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">Blok Rumah:</label>
+                <p className="data-preview__name">{data.blokRumah}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">No HP:</label>
+                <p className="data-preview__name">{data.phone}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">
+                  Hewan yang diqurbankan:
+                </label>
+                <p className="data-preview__name">{data.hewan}</p>
+              </div>
             </div>
             {/* <div className="data-preview__content">
               <Row>

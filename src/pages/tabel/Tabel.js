@@ -210,18 +210,21 @@ const Tabel = () => {
         <Flex justify="space-evenly" w="200px">
           <Text
             className="tabel-action"
+            // w={10}
             onClick={() => navigate(`/data-preview/${data[index].id}`)}
           >
             View
           </Text>
           <Text
             className="tabel-action"
+            // w={10}
             onClick={() => navigate(`/edit-data/${data[index].id}`)}
           >
             Edit
           </Text>
           <Text
             className="tabel-action"
+            // w={10}
             onClick={() => handleDelete(data[index].id)}
           >
             Delete
@@ -323,7 +326,7 @@ const Tabel = () => {
           </>
         )}
       </div>
-      <div className="print-layout">
+      {/* <div className="print-layout">
         {printData &&
           printData.map((value, index) => {
             return (
@@ -378,7 +381,7 @@ const Tabel = () => {
               </>
             );
           })}
-      </div>
+      </div> */}
     </div>
   );
 };
