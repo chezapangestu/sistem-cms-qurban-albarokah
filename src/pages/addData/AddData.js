@@ -13,23 +13,24 @@ import PersonalDetails from "./components/PersonalDetails";
 
 const AddData = ({ isEdit }) => {
   const [data, setData] = useState({
-    jobTitle: "",
+    // jobTitle: "",
     firstName: "",
     lastName: "",
-    email: "",
+    blokRumah: "",
     phone: "",
-    country: "",
-    city: "",
-    address: "",
-    postalCode: "",
-    birthPlace: "",
-    birthDate: "",
+    hewan: "",
+    // country: "",
+    // city: "",
+    // address: "",
+    // postalCode: "",
+    // birthPlace: "",
+    // birthDate: "",
     profileSummary: "",
-    education: [],
-    skills: [],
-    workExperience: [],
-    organizationExperience: [],
-    languages: [],
+    // education: [],
+    // skills: [],
+    // workExperience: [],
+    // organizationExperience: [],
+    // languages: [],
   });
   const navigate = useNavigate();
   const { anak } = useParams();
@@ -187,11 +188,11 @@ const AddData = ({ isEdit }) => {
     <>
       <div className="add-data__container">
         <div className="add-data__title">
-          <p>{isEdit ? "Edit" : "Create New"} CV</p>
+          <p>{isEdit ? "Edit" : "Tambahkan"} Data Shohibul Qurban</p>
         </div>
         <PersonalDetails data={data} handleChange={handleChange} />
         <ProfileSummary data={data} handleChange={handleChange} />
-        <Education
+        {/* <Education
           data={data}
           handleGlobalAdd={handleGlobalAdd}
           handleGlobalChange={handleGlobalChange}
@@ -220,21 +221,21 @@ const AddData = ({ isEdit }) => {
           handleGlobalAdd={handleGlobalAdd}
           handleGlobalChange={handleGlobalChange}
           handleGlobalDelete={handleGlobalDelete}
-        />
+        /> */}
         <div className="add-data__button">
           <Button
             onClick={handleSubmit}
             colorScheme="blue"
             className="submit-button"
           >
-            Submit
+            Tambahkan
           </Button>
           <Button
             onClick={() => navigate(`/`)}
             colorScheme="yellow"
-            className="cancel-button"
+            className=""
           >
-            Cancel
+            Kembali
           </Button>
         </div>
       </div>

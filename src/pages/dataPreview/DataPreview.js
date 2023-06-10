@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './dataPreview.css';
-import { useParams } from 'react-router-dom';
-import { Col, Row } from 'reactstrap';
-import RightSection from './components/RightSection';
-import ProfileSummary from './components/ProfileSummary';
-import Details from './components/Details';
-import LeftSection from './components/LeftSection';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
-import { Button } from '@chakra-ui/react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./dataPreview.css";
+import { useParams, useNavigate } from "react-router-dom";
+import { Col, Row } from "reactstrap";
+import RightSection from "./components/RightSection";
+import ProfileSummary from "./components/ProfileSummary";
+import Details from "./components/Details";
+import LeftSection from "./components/LeftSection";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { Button } from "@chakra-ui/react";
 
 const DataPreview = () => {
   const [data, setData] = useState();
   const { anak } = useParams();
+  const navigate = useNavigate();
   const getData = async () => {
     try {
       const { data } = await axios.get(
@@ -31,15 +32,15 @@ const DataPreview = () => {
     getData();
   }, [anak]);
   const printDocument = async () => {
-    const input = document.getElementById('dataPrint');
+    const input = document.getElementById("dataPrint");
     const canvas = await html2canvas(input);
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF();
     const imgProps = pdf.getImageProperties(imgData);
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
     pdf.addImage(imgData, 0, 0, pdfWidth, pdfHeight);
-    pdf.save('cv.pdf');
+    pdf.save("cv.pdf");
   };
   return (
     <>
@@ -48,11 +49,13 @@ const DataPreview = () => {
           <div className="data-preview__container" id="dataPrint">
             <div className="data-preview__header">
               <p className="data-preview__name">
-                {data.firstName} {data.lastName}
+                Nama: {data.firstName} {data.lastName}
               </p>
-              <p className="data-preview__job-title">{data.jobTitle}</p>
+              <p className="data-preview__name">Blok Rumah: {data.blokRumah}</p>
+              <p className="data-preview__name">No Handphone: {data.phone}</p>
+              <p className="data-preview__name">Hewan: {data.hewan}</p>
             </div>
-            <div className="data-preview__content">
+            {/* <div className="data-preview__content">
               <Row>
                 <Col lg="3">
                   {data.address && <Details data={data} />}
@@ -80,13 +83,22 @@ const DataPreview = () => {
                     )}
                 </Col>
               </Row>
-            </div>
+            </div> */}
           </div>
-          <div className="download-button">
+          <div className="cancel-button">
+            <Button
+              onClick={() => navigate(`/`)}
+              colorScheme="yellow"
+              className="cancel-button"
+            >
+              Kembali
+            </Button>
+          </div>
+          {/* <div className="download-button">
             <Button onClick={printDocument} colorScheme="blue">
               Download as PDF
             </Button>
-          </div>
+          </div> */}
         </>
       )}
     </>

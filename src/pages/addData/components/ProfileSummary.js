@@ -1,17 +1,26 @@
-import React from 'react';
-import { Row, Col } from 'reactstrap';
-import { Textarea } from '@chakra-ui/react';
+import React from "react";
+import { Row, Col } from "reactstrap";
+import { Textarea } from "@chakra-ui/react";
 
 const ProfileSummary = ({ data, handleChange }) => {
   return (
     <div className="add-data__profile-summary">
       <div className="section-title">
-        <p>Profile Summary</p>
+        <p>Keterangan</p>
       </div>
       <Row>
         <Col lg="12">
-          <p className="add-data-section__title">Write 2-4 short & energetic sentences to interest the reader!</p>
-          <Textarea height="200px" name="profileSummary" value={data.profileSummary} onChange={(event) => handleChange(event)} variant="filled" focusBorderColor="lime" />
+          <p className="add-data-section__title">
+            Informasi tambahan sebagai detail
+          </p>
+          <Textarea
+            height="200px"
+            name="profileSummary"
+            value={data.profileSummary}
+            onChange={(event) => handleChange(event)}
+            variant="filled"
+            focusBorderColor="blue.500"
+          />
         </Col>
       </Row>
     </div>

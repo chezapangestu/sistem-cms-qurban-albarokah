@@ -1,14 +1,14 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import { Input } from "@chakra-ui/react";
+import { Input, Select } from "@chakra-ui/react";
 
 const PersonalDetails = ({ data, handleChange }) => {
   return (
     <div className="add-data__personal-details">
       <div className="section-title">
-        <p>Personal Details</p>
+        <p>Informasi Data Diri</p>
       </div>
-      <Row className="row">
+      {/* <Row className="row">
         <Col lg="6">
           <p className="add-data-section__title">Wanted Job Title</p>
           <Input
@@ -19,10 +19,10 @@ const PersonalDetails = ({ data, handleChange }) => {
             focusBorderColor="blue.500"
           />
         </Col>
-      </Row>
+      </Row> */}
       <Row className="row">
         <Col lg="6">
-          <p className="add-data-section__title">First Name</p>
+          <p className="add-data-section__title">Nama depan</p>
           <Input
             name="firstName"
             value={data.firstName}
@@ -32,7 +32,7 @@ const PersonalDetails = ({ data, handleChange }) => {
           />
         </Col>
         <Col lg="6">
-          <p className="add-data-section__title">Last Name</p>
+          <p className="add-data-section__title">Nama Belakang</p>
           <Input
             name="lastName"
             value={data.lastName}
@@ -44,18 +44,18 @@ const PersonalDetails = ({ data, handleChange }) => {
       </Row>
       <Row className="row">
         <Col lg="6">
-          <p className="add-data-section__title">Email</p>
+          <p className="add-data-section__title">Blok Rumah</p>
           <Input
-            name="email"
-            type="email"
-            value={data.email}
+            name="blokRumah"
+            type="blokRumah"
+            value={data.blokRumah}
             onChange={(event) => handleChange(event)}
             variant="filled"
             focusBorderColor="blue.500"
           />
         </Col>
         <Col lg="6">
-          <p className="add-data-section__title">Phone</p>
+          <p className="add-data-section__title">No Handphone</p>
           <Input
             name="phone"
             type="number"
@@ -67,6 +67,22 @@ const PersonalDetails = ({ data, handleChange }) => {
         </Col>
       </Row>
       <Row className="row">
+        <Col lg="6">
+          <p className="add-data-section__title">Hewan</p>
+          <Select
+            placeholder="Pilih hewan"
+            name="hewan"
+            value={data.hewan}
+            onChange={(event) => handleChange(event)}
+            variant="filled"
+            focusBorderColor="blue.500"
+          >
+            <option value="Sapi">Sapi</option>
+            <option value="Domba">Domba</option>
+          </Select>
+        </Col>
+      </Row>
+      {/* <Row className="row">
         <Col lg="6">
           <p className="add-data-section__title">Country</p>
           <Input
@@ -131,7 +147,7 @@ const PersonalDetails = ({ data, handleChange }) => {
             focusBorderColor="blue.500"
           />
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 };

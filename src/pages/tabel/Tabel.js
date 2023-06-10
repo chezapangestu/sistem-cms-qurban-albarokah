@@ -199,8 +199,9 @@ const Tabel = () => {
     // },
     { name: "First Name", selector: (row) => row.firstName, sortable: true },
     { name: "Last Name", selector: (row) => row.lastName, sortable: true },
-    { name: "Email", selector: (row) => row.email, sortable: true },
-    { name: "Job Title", selector: (row) => row.jobTitle, sortable: true },
+    { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
+    { name: "No Handphone", selector: (row) => row.phone, sortable: true },
+    { name: "Hewan", selector: (row) => row.hewan, sortable: true },
     {
       name: "Action",
       id: "view",
