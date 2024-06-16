@@ -13,34 +13,23 @@ import PersonalDetails from "./components/PersonalDetails";
 
 const AddData = ({ isEdit }) => {
   const [data, setData] = useState({
-    // jobTitle: "",
-    firstName: "",
-    lastName: "",
-    blokRumah: "",
-    phone: "",
-    hewan: "",
-    // country: "",
-    // city: "",
-    // address: "",
-    // postalCode: "",
-    // birthPlace: "",
-    // birthDate: "",
+    kodeHewan: "",
+    noKodeHewan: "",
+    beratDaging: "",
+    beratKulit: "",
     profileSummary: "",
-    // education: [],
-    // skills: [],
-    // workExperience: [],
-    // organizationExperience: [],
-    // languages: [],
+    tanggalWaktu: "",
   });
   const navigate = useNavigate();
-  const { anak } = useParams();
+  const { hewan } = useParams();
+
   const fetchData = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails/${anak}`
+        `${process.env.REACT_APP_FAKE_API}/personalDetails/${hewan}`
       );
       // const { data } = await axios.get(
-      //   `http://localhost:3004/personalDetails/${anak}`
+      //   `http://localhost:3004/personalDetails/${hewan}`
       // );
       setData(data);
     } catch (err) {
@@ -48,10 +37,10 @@ const AddData = ({ isEdit }) => {
     }
   };
   useEffect(() => {
-    if (anak) {
+    if (hewan) {
       fetchData();
     }
-  }, [anak]);
+  }, [hewan]);
   const handleChange = (e) => {
     let temp = { ...data };
     temp[e.target.name] = e.target.value;
@@ -65,14 +54,14 @@ const AddData = ({ isEdit }) => {
         let postData = data;
         let unikId = new Date().getTime();
         postData.id = unikId;
-        if (anak) {
+        if (hewan) {
           let putData = data;
           await axios.put(
-            `${process.env.REACT_APP_FAKE_API}/personalDetails/${anak}`,
+            `${process.env.REACT_APP_FAKE_API}/personalDetails/${hewan}`,
             putData
           );
           // await axios.put(
-          //   `http://localhost:3004/personalDetails/${anak}`,
+          //   `http://localhost:3004/personalDetails/${hewan}`,
           //   putData
           // );
         } else {
@@ -85,7 +74,7 @@ const AddData = ({ isEdit }) => {
         toast({
           title: "Tambah data berhasil",
           description: `Data telah berhasil ${
-            anak ? "diedit!" : "ditambahkan!"
+            hewan ? "diedit!" : "ditambahkan!"
           }`,
           position: "top",
           status: "success",
@@ -94,7 +83,7 @@ const AddData = ({ isEdit }) => {
         });
         setTimeout(() => {
           navigate(`/`);
-        }, 2000);
+        }, 1000);
       } catch (err) {
         console.log(err);
       }
@@ -184,44 +173,15 @@ const AddData = ({ isEdit }) => {
     temp[type][i][e.target.name] = e.target.value;
     setData(temp);
   };
+
   return (
     <>
       <div className="add-data__container">
         <div className="add-data__title">
-          <p>{isEdit ? "Edit" : "Tambahkan"} Data Shohibul Qurban</p>
+          <p>{isEdit ? "Edit" : "Tambahkan"} Data Hewan Qurban</p>
         </div>
         <PersonalDetails data={data} handleChange={handleChange} />
         <ProfileSummary data={data} handleChange={handleChange} />
-        {/* <Education
-          data={data}
-          handleGlobalAdd={handleGlobalAdd}
-          handleGlobalChange={handleGlobalChange}
-          handleGlobalDelete={handleGlobalDelete}
-        />
-        <Skills
-          data={data}
-          handleGlobalAdd={handleGlobalAdd}
-          handleGlobalChange={handleGlobalChange}
-          handleGlobalDelete={handleGlobalDelete}
-        />
-        <WorkingExperience
-          data={data}
-          handleGlobalAdd={handleGlobalAdd}
-          handleGlobalChange={handleGlobalChange}
-          handleGlobalDelete={handleGlobalDelete}
-        />
-        <OrganizationExperience
-          data={data}
-          handleGlobalAdd={handleGlobalAdd}
-          handleGlobalChange={handleGlobalChange}
-          handleGlobalDelete={handleGlobalDelete}
-        />
-        <Languages
-          data={data}
-          handleGlobalAdd={handleGlobalAdd}
-          handleGlobalChange={handleGlobalChange}
-          handleGlobalDelete={handleGlobalDelete}
-        /> */}
         <div className="add-data__button">
           <Button
             onClick={handleSubmit}

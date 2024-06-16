@@ -59,8 +59,8 @@
 }
 
 .add-data__button {
-  padding-left: 20px;
   display: flex;
+  justify-content: center;
 }
 
 .submit-button {

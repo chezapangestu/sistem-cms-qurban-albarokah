@@ -1,9 +1,9 @@
-import './App.css';
-import { ChakraProvider } from '@chakra-ui/react';
-import Tabel from './pages/tabel/Tabel';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AddData from './pages/addData/AddData';
-import DataPreview from './pages/dataPreview/DataPreview';
+import "./App.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import Tabel from "./pages/tabel/Tabel";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AddData from "./pages/addData/AddData";
+import DataPreview from "./pages/dataPreview/DataPreview";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Tabel />} />
           <Route path="/add-data" element={<AddData />} />
-          <Route path="/data-preview/:anak" element={<DataPreview />} />
-          <Route path="/edit-data/:anak" element={<AddData isEdit />} />
+          <Route path="/data-preview/:hewan" element={<DataPreview />} />
+          <Route path="/edit-data/:hewan" element={<AddData isEdit />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

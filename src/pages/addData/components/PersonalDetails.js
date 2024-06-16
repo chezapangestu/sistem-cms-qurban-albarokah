@@ -6,148 +6,83 @@ const PersonalDetails = ({ data, handleChange }) => {
   return (
     <div className="add-data__personal-details">
       <div className="section-title">
-        <p>Informasi Data Diri</p>
+        <p>Informasi Data Hewan</p>
       </div>
-      {/* <Row className="row">
-        <Col lg="6">
-          <p className="add-data-section__title">Wanted Job Title</p>
-          <Input
-            name="jobTitle"
-            value={data.jobTitle}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-      </Row> */}
       <Row className="row">
         <Col lg="6">
-          <p className="add-data-section__title">Nama depan</p>
-          <Input
-            name="firstName"
-            value={data.firstName}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-        <Col lg="6">
-          <p className="add-data-section__title">Nama Belakang</p>
-          <Input
-            name="lastName"
-            value={data.lastName}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-      </Row>
-      <Row className="row">
-        <Col lg="6">
-          <p className="add-data-section__title">Blok Rumah</p>
-          <Input
-            name="blokRumah"
-            type="blokRumah"
-            value={data.blokRumah}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-        <Col lg="6">
-          <p className="add-data-section__title">No Handphone</p>
-          <Input
-            name="phone"
-            type="number"
-            value={data.phone}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-      </Row>
-      <Row className="row">
-        <Col lg="6">
-          <p className="add-data-section__title">Hewan</p>
+          <p className="add-data-section__title">Kode Hewan</p>
           <Select
             placeholder="Pilih hewan"
-            name="hewan"
-            value={data.hewan}
+            name="kodeHewan"
+            value={data.kodeHewan}
             onChange={(event) => handleChange(event)}
             variant="filled"
             focusBorderColor="blue.500"
           >
-            <option value="Sapi">Sapi</option>
-            <option value="Domba">Domba</option>
+            <option value="Sapi Baqarah">Sapi Baqarah</option>
+            <option value="Domba Special">Domba Alkautsar (Special)</option>
+            <option value="Domba Premium">Domba Alkautsar (Premium)</option>
+            <option value="Domba Special Request">
+              Domba Alkautsar (Special Request)
+            </option>
+            <option value="Membawa sendiri">Membawa sendiri</option>
           </Select>
         </Col>
-      </Row>
-      {/* <Row className="row">
         <Col lg="6">
-          <p className="add-data-section__title">Country</p>
+          <p className="add-data-section__title">Nomor Kode Hewan</p>
           <Input
-            name="country"
-            value={data.country}
+            placeholder="Nomor kode hewan"
+            name="noKodeHewan"
+            value={data.noKodeHewan}
+            type="number"
             onChange={(event) => handleChange(event)}
             variant="filled"
             focusBorderColor="blue.500"
-          />
-        </Col>
-        <Col lg="6">
-          <p className="add-data-section__title">City</p>
-          <Input
-            name="city"
-            value={data.city}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
+          ></Input>
         </Col>
       </Row>
       <Row className="row">
         <Col lg="6">
-          <p className="add-data-section__title">Address</p>
+          <p className="add-data-section__title">Berat Daging (Kg)</p>
           <Input
-            name="address"
-            value={data.address}
+            placeholder="Berat daging dalam kilogram"
+            name="beratDaging"
+            value={data.beratDaging}
+            type="number"
             onChange={(event) => handleChange(event)}
             variant="filled"
             focusBorderColor="blue.500"
           />
         </Col>
         <Col lg="6">
-          <p className="add-data-section__title">Postal Code</p>
+          <p className="add-data-section__title">Berat Kulit (Kg)</p>
           <Input
-            name="postalCode"
-            value={data.postalCode}
+            placeholder="Berat kulit dalam kilogram"
+            name="beratKulit"
+            value={data.beratKulit}
+            type="number"
             onChange={(event) => handleChange(event)}
             variant="filled"
             focusBorderColor="blue.500"
           />
         </Col>
       </Row>
-      <Row className="row">
+      <Row>
         <Col lg="6">
-          <p className="add-data-section__title">Place of Birth</p>
+          <p className="add-data-section__title">
+            Tanggal & waktu selesai pencatatan
+          </p>
           <Input
-            name="birthPlace"
-            value={data.birthPlace}
-            onChange={(event) => handleChange(event)}
+            placeholder="Pilih tanggal dan waktu"
+            name="tanggalWaktu"
+            value={data.tanggalWaktu}
+            type="datetime-local"
+            onChange={handleChange}
+            size="md"
             variant="filled"
-            focusBorderColor="blue.500"
           />
         </Col>
-        <Col lg="6">
-          <p className="add-data-section__title">Date of Birth</p>
-          <Input
-            name="birthDate"
-            value={data.birthDate}
-            onChange={(event) => handleChange(event)}
-            variant="filled"
-            focusBorderColor="blue.500"
-          />
-        </Col>
-      </Row> */}
+      </Row>
     </div>
   );
 };

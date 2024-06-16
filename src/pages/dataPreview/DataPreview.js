@@ -13,15 +13,15 @@ import { Button } from "@chakra-ui/react";
 
 const DataPreview = () => {
   const [data, setData] = useState();
-  const { anak } = useParams();
+  const { hewan } = useParams();
   const navigate = useNavigate();
   const getData = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails/${anak}`
+        `${process.env.REACT_APP_FAKE_API}/personalDetails/${hewan}`
       );
       // const { data } = await axios.get(
-      //   `http://localhost:3004/personalDetails/${anak}`
+      //   `http://localhost:3004/personalDetails/${hewan}`
       // );
       setData(data);
     } catch (err) {
@@ -30,7 +30,7 @@ const DataPreview = () => {
   };
   useEffect(() => {
     getData();
-  }, [anak]);
+  }, [hewan]);
   const printDocument = async () => {
     const input = document.getElementById("dataPrint");
     const canvas = await html2canvas(input);
@@ -48,18 +48,18 @@ const DataPreview = () => {
         <>
           <div className="data-preview__container" id="dataPrint">
             <div className="data-preview__title">
-              <p>Data Shohibul Qurban</p>
+              <p>Data Hewan Qurban</p>
             </div>
             <div className="data-preview__header">
-              <div className="data-preview__item">
+              {/* <div className="data-preview__item">
                 <label className="data-preview__label">
                   Nama Shohibul Qurban:
                 </label>
                 <p className="data-preview__name">
                   {data.firstName} {data.lastName}
                 </p>
-              </div>
-              <div className="data-preview__item">
+              </div> */}
+              {/* <div className="data-preview__item">
                 <label className="data-preview__label">Blok Rumah:</label>
                 <p className="data-preview__name">{data.blokRumah}</p>
               </div>
@@ -72,6 +72,22 @@ const DataPreview = () => {
                   Hewan yang diqurbankan:
                 </label>
                 <p className="data-preview__name">{data.hewan}</p>
+              </div> */}
+              <div className="data-preview__item">
+                <label className="data-preview__label">Kode Hewan</label>
+                <p className="data-preview__name">{data.kodeHewan}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">Nomor Kode Hewan</label>
+                <p className="data-preview__name">{data.noKodeHewan}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">Tanggal & waktu</label>
+                <p className="data-preview__name">{data.tanggalWaktu}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">Note:</label>
+                <p className="data-preview__name">{data.profileSummary}</p>
               </div>
             </div>
             {/* <div className="data-preview__content">

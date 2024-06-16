@@ -6,7 +6,7 @@ const ProfileSummary = ({ data, handleChange }) => {
   return (
     <div className="add-data__profile-summary">
       <div className="section-title">
-        <p>Keterangan</p>
+        <p>Note</p>
       </div>
       <Row>
         <Col lg="12">

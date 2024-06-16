@@ -197,11 +197,32 @@ const Tabel = () => {
     //   cell: (row, index) => <Checkbox value={row.id.toString()} />,
     //   width: "50px",
     // },
-    { name: "First Name", selector: (row) => row.firstName, sortable: true },
-    { name: "Last Name", selector: (row) => row.lastName, sortable: true },
-    { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
-    { name: "No Handphone", selector: (row) => row.phone, sortable: true },
-    { name: "Hewan", selector: (row) => row.hewan, sortable: true },
+    // { name: "Hewan", selector: (row) => row.hewan, sortable: true },
+    { name: "Kode Hewan", selector: (row) => row.kodeHewan, sortable: true },
+    {
+      name: "Nomor Kode Hewan",
+      selector: (row) => row.noKodeHewan,
+      sortable: true,
+    },
+    {
+      name: "Berat Daging (Kg)",
+      selector: (row) => row.beratDaging,
+      sortable: true,
+    },
+    {
+      name: "Berat Kulit (Kg)",
+      selector: (row) => row.beratKulit,
+      sortable: true,
+    },
+    {
+      name: "Tanggal & waktu",
+      selector: (row) => row.tanggalWaktu,
+      sortable: true,
+    },
+    // { name: "First Name", selector: (row) => row.firstName, sortable: true },
+    // { name: "Last Name", selector: (row) => row.lastName, sortable: true },
+    // { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
+    // { name: "No Handphone", selector: (row) => row.phone, sortable: true },
     {
       name: "Action",
       id: "view",
@@ -295,7 +316,7 @@ const Tabel = () => {
         ) : (
           <>
             <div className="tabel__title">
-              <p>Data Shohibul Qurban</p>
+              <p>Perhitungan Daging Hewan Qurban</p>
               <Button colorScheme="blue" onClick={() => navigate(`/add-data`)}>
                 + Add Data
               </Button>
