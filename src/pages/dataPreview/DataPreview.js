@@ -82,6 +82,14 @@ const DataPreview = () => {
                 <p className="data-preview__name">{data.noKodeHewan}</p>
               </div>
               <div className="data-preview__item">
+                <label className="data-preview__label">Berat Daging (Kg)</label>
+                <p className="data-preview__name">{data.beratDaging}</p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">Berat Kulit (Kg)</label>
+                <p className="data-preview__name">{data.beratKulit}</p>
+              </div>
+              <div className="data-preview__item">
                 <label className="data-preview__label">Tanggal & waktu</label>
                 <p className="data-preview__name">{data.tanggalWaktu}</p>
               </div>
