@@ -11,17 +11,17 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { Button } from "@chakra-ui/react";
 
-const DataPreview = () => {
+const DataPreviewPengemasan = () => {
   const [data, setData] = useState();
   const { hewan } = useParams();
   const navigate = useNavigate();
   const getData = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails/${hewan}`
+        `${process.env.REACT_APP_FAKE_API}/personalDetailsPengemasan/${hewan}`
       );
       // const { data } = await axios.get(
-      //   `http://localhost:3004/personalDetails/${hewan}`
+      //   `http://localhost:3004/personalDetailsPengemasan/${hewan}`
       // );
       setData(data);
     } catch (err) {
@@ -79,27 +79,18 @@ const DataPreview = () => {
                 </label>
                 <p className="data-preview__name">{data.hewan}</p>
               </div> */}
-              <div className="data-preview__item">
-                <label className="data-preview__label">Kode Hewan</label>
-                <p className="data-preview__name">{data.kodeHewan}</p>
-              </div>
-              <div className="data-preview__item">
-                <label className="data-preview__label">Nomor Kode Hewan</label>
-                <p className="data-preview__name">{data.noKodeHewan}</p>
-              </div>
-              <div className="data-preview__item">
-                <label className="data-preview__label">Berat Daging (Kg)</label>
-                <p className="data-preview__name">{data.beratDaging}</p>
-              </div>
-              <div className="data-preview__item">
-                <label className="data-preview__label">Berat Kulit (Kg)</label>
-                <p className="data-preview__name">{data.beratKulit}</p>
-              </div>
+
               <div className="data-preview__item">
                 <label className="data-preview__label">Tanggal & waktu</label>
                 <p className="data-preview__name">
                   {formatDateTime(data.tanggalWaktu)}
                 </p>
+              </div>
+              <div className="data-preview__item">
+                <label className="data-preview__label">
+                  Jumlah kresek (pcs)
+                </label>
+                <p className="data-preview__name">{data.jumlahKresek}</p>
               </div>
               <div className="data-preview__item">
                 <label className="data-preview__label">Note:</label>
@@ -138,7 +129,7 @@ const DataPreview = () => {
           </div>
           <div className="cancel-button">
             <Button
-              onClick={() => navigate(`/`)}
+              onClick={() => navigate(`/tabel-pengemasan`)}
               colorScheme="yellow"
               className="cancel-button"
             >
@@ -155,4 +146,4 @@ const DataPreview = () => {
     </>
   );
 };
-export default DataPreview;
+export default DataPreviewPengemasan;

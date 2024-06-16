@@ -26,7 +26,7 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { intersection } from "lodash";
 
-const TabelPerhitungan = () => {
+const TabelPengemasan = () => {
   const { search } = useLocation();
   const [data, setData] = useState([]);
   const [fullData, setFullData] = useState([]);
@@ -47,10 +47,10 @@ const TabelPerhitungan = () => {
       currentQuery._page = parseInt(currentQuery._page) || 1;
       const queries = queryString.stringify({ ...currentQuery, _limit: 7 });
       const { data } = await axios.get(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails?${queries}`
+        `${process.env.REACT_APP_FAKE_API}/personalDetailsPengemasan?${queries}`
       );
       // const { data } = await axios.get(
-      //   `http://localhost:3004/personalDetails?${queries}`
+      //   `http://localhost:3004/personalDetailsPengemasan?${queries}`
       // );
       setData(data);
       setTimeout(() => {
@@ -63,9 +63,9 @@ const TabelPerhitungan = () => {
   const fetchTotalPage = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails`
+        `${process.env.REACT_APP_FAKE_API}/personalDetailsPengemasan`
       );
-      // const { data } = await axios.get(`http://localhost:3004/personalDetails`);
+      // const { data } = await axios.get(`http://localhost:3004/personalDetailsPengemasan`);
       setFullData(data);
       setTotalPage(Math.ceil(data.length / 7));
     } catch (err) {
@@ -85,9 +85,9 @@ const TabelPerhitungan = () => {
     try {
       console.log(id);
       await axios.delete(
-        `${process.env.REACT_APP_FAKE_API}/personalDetails/${id}`
+        `${process.env.REACT_APP_FAKE_API}/personalDetailsPengemasan/${id}`
       );
-      // await axios.delete(`http://localhost:3004/personalDetails/${id}`);
+      // await axios.delete(`http://localhost:3004/personalDetailsPengemasan/${id}`);
       fetchData();
       toast({
         title: "Hapus data berhasil",
@@ -213,17 +213,16 @@ const TabelPerhitungan = () => {
     //   width: "50px",
     // },
     // { name: "Hewan", selector: (row) => row.hewan, sortable: true },
-    { name: "Kode Hewan", selector: (row) => row.kodeHewan, sortable: true },
-    {
-      name: "Berat Daging (Kg)",
-      selector: (row) => row.beratDaging,
-      sortable: true,
-    },
-    {
-      name: "Berat Kulit (Kg)",
-      selector: (row) => row.beratKulit,
-      sortable: true,
-    },
+    // { name: "Kode Hewan", selector: (row) => row.kodeHewan, sortable: true },
+    // {
+    //   name: "Berat Daging (Kg)",
+    //   selector: (row) => row.beratDaging,
+    //   sortable: true,
+    // },
+    // {
+    //   name: "Berat Kulit (Kg)",
+    //   selector: (row) => row.beratKulit,
+    //   sortable: true,
     {
       name: (
         <div style={{ fontSize: 20, fontWeight: 700 }}>Waktu pencatatan</div>
@@ -233,12 +232,20 @@ const TabelPerhitungan = () => {
       ),
       sortable: true,
     },
+    // },
+    {
+      name: (
+        <div style={{ fontSize: 20, fontWeight: 700 }}>Jumlah Kresek (pcs)</div>
+      ),
+      selector: (row) => <div style={{ fontSize: 20 }}>{row.jumlahKresek}</div>,
+      sortable: true,
+    },
     // { name: "First Name", selector: (row) => row.firstName, sortable: true },
     // { name: "Last Name", selector: (row) => row.lastName, sortable: true },
     // { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
     // { name: "No Handphone", selector: (row) => row.phone, sortable: true },
     {
-      name: "Action",
+      name: <div style={{ fontSize: 20, fontWeight: 700 }}>Action</div>,
       id: "view",
       accessor: (str) => "view",
       cell: (row, index) => (
@@ -246,14 +253,16 @@ const TabelPerhitungan = () => {
           <Text
             className="tabel-action"
             // w={10}
-            onClick={() => navigate(`/data-preview/${data[index].id}`)}
+            onClick={() =>
+              navigate(`/data-preview-pengemasan/${data[index].id}`)
+            }
           >
             View
           </Text>
           <Text
             className="tabel-action"
             // w={10}
-            onClick={() => navigate(`/edit-data/${data[index].id}`)}
+            onClick={() => navigate(`/edit-data-pengemasan/${data[index].id}`)}
           >
             Edit
           </Text>
@@ -330,11 +339,11 @@ const TabelPerhitungan = () => {
         ) : (
           <>
             <div className="tabel__title">
-              <p>Perhitungan Daging Hewan Qurban</p>
+              <p>Pengemasan Daging</p>
               <div className="tabel__button">
                 <Button
                   colorScheme="blue"
-                  onClick={() => navigate(`/add-data`)}
+                  onClick={() => navigate(`/add-data-pengemasan`)}
                 >
                   + Add Data
                 </Button>
@@ -429,4 +438,4 @@ const TabelPerhitungan = () => {
   );
 };
 
-export default TabelPerhitungan;
+export default TabelPengemasan;
