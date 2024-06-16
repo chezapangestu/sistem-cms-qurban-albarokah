@@ -45,7 +45,7 @@ const TabelPengemasan = () => {
     try {
       const currentQuery = queryString.parse(search);
       currentQuery._page = parseInt(currentQuery._page) || 1;
-      const queries = queryString.stringify({ ...currentQuery, _limit: 7 });
+      const queries = queryString.stringify({ ...currentQuery, _limit: 100 });
       const { data } = await axios.get(
         `${process.env.REACT_APP_FAKE_API}/personalDetailsPengemasan?${queries}`
       );
@@ -67,7 +67,7 @@ const TabelPengemasan = () => {
       );
       // const { data } = await axios.get(`http://localhost:3004/personalDetailsPengemasan`);
       setFullData(data);
-      setTotalPage(Math.ceil(data.length / 7));
+      setTotalPage(Math.ceil(data.length / 100));
     } catch (err) {
       console.log(err);
     }
@@ -339,7 +339,7 @@ const TabelPengemasan = () => {
                   colorScheme="blue"
                   onClick={() => navigate(`/add-data-pengemasan`)}
                 >
-                  + Add Data
+                  +
                 </Button>
                 <Button colorScheme="teal" onClick={fetchData}>
                   ⟳

@@ -45,7 +45,7 @@ const DisplayQueue = () => {
     try {
       const currentQuery = queryString.parse(search);
       currentQuery._page = parseInt(currentQuery._page) || 1;
-      const queries = queryString.stringify({ ...currentQuery, _limit: 7 });
+      const queries = queryString.stringify({ ...currentQuery, _limit: 50 });
       const { data } = await axios.get(
         `${process.env.REACT_APP_FAKE_API}/personalDetails?${queries}`
       );
@@ -67,7 +67,7 @@ const DisplayQueue = () => {
       );
       // const { data } = await axios.get(`http://localhost:3004/personalDetails`);
       setFullData(data);
-      setTotalPage(Math.ceil(data.length / 7));
+      setTotalPage(Math.ceil(data.length / 50));
     } catch (err) {
       console.log(err);
     }
@@ -187,14 +187,14 @@ const DisplayQueue = () => {
     compareData();
   }, [selectedData]);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     fetchData();
-  //   }, 300000); // Panggil setiap 1 menit (60000 milidetik)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchData();
+    }, 60000); // Panggil setiap 1 menit (60000 milidetik)
 
-  //   // Membersihkan interval saat komponen dilepas
-  //   return () => clearInterval(interval);
-  // }, []);
+    // Membersihkan interval saat komponen dilepas
+    return () => clearInterval(interval);
+  }, []);
 
   const formatDateTime = (dateTimeString) => {
     const date = new Date(dateTimeString);

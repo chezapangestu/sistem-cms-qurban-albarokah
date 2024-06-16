@@ -84,10 +84,6 @@ const DataPreview = () => {
                 <p className="data-preview__name">{data.kodeHewan}</p>
               </div>
               <div className="data-preview__item">
-                <label className="data-preview__label">Nomor Kode Hewan</label>
-                <p className="data-preview__name">{data.noKodeHewan}</p>
-              </div>
-              <div className="data-preview__item">
                 <label className="data-preview__label">Berat Daging (Kg)</label>
                 <p className="data-preview__name">{data.beratDaging}</p>
               </div>
@@ -138,7 +134,7 @@ const DataPreview = () => {
           </div>
           <div className="cancel-button">
             <Button
-              onClick={() => navigate(`/`)}
+              onClick={() => navigate(`/tabel-perhitungan`)}
               colorScheme="yellow"
               className="cancel-button"
             >

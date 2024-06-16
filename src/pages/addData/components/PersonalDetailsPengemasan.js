@@ -23,6 +23,8 @@ const PersonalDetailsPengemasan = ({ data, handleChange }) => {
             variant="filled"
           />
         </Col>
+      </Row>
+      <Row>
         <Col lg="6">
           <p className="add-data-section__title">Jumlah kresek (pcs)</p>
           <Input
