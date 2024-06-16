@@ -26,7 +26,7 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { intersection } from "lodash";
 
-const Tabel = () => {
+const TabelPerhitungan = () => {
   const { search } = useLocation();
   const [data, setData] = useState([]);
   const [fullData, setFullData] = useState([]);
@@ -186,6 +186,16 @@ const Tabel = () => {
   useEffect(() => {
     compareData();
   }, [selectedData]);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     fetchData();
+  //   }, 300000); // Panggil setiap 1 menit (60000 milidetik)
+
+  //   // Membersihkan interval saat komponen dilepas
+  //   return () => clearInterval(interval);
+  // }, []);
+
   const columns = [
     // {
     //   name: (
@@ -199,11 +209,6 @@ const Tabel = () => {
     // },
     // { name: "Hewan", selector: (row) => row.hewan, sortable: true },
     { name: "Kode Hewan", selector: (row) => row.kodeHewan, sortable: true },
-    {
-      name: "Nomor Kode Hewan",
-      selector: (row) => row.noKodeHewan,
-      sortable: true,
-    },
     {
       name: "Berat Daging (Kg)",
       selector: (row) => row.beratDaging,
@@ -317,9 +322,17 @@ const Tabel = () => {
           <>
             <div className="tabel__title">
               <p>Perhitungan Daging Hewan Qurban</p>
-              <Button colorScheme="blue" onClick={() => navigate(`/add-data`)}>
-                + Add Data
-              </Button>
+              <div className="tabel__button">
+                <Button
+                  colorScheme="blue"
+                  onClick={() => navigate(`/add-data`)}
+                >
+                  + Add Data
+                </Button>
+                <Button colorScheme="teal" onClick={fetchData}>
+                  ⟳
+                </Button>
+              </div>
             </div>
             <div className="tabel__content">
               {/* <CheckboxGroup
@@ -407,4 +420,4 @@ const Tabel = () => {
   );
 };
 
-export default Tabel;
+export default TabelPerhitungan;

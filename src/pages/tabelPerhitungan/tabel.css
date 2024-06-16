@@ -28,6 +28,10 @@
   padding-right: 30px;
 }
 
+.tabel__button {
+  display: flex;
+  gap: 10px;
+}
 .tabel-action {
   cursor: pointer;
   width: 40px;

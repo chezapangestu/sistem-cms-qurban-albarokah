@@ -14,12 +14,15 @@ import PersonalDetails from "./components/PersonalDetails";
 const AddData = ({ isEdit }) => {
   const [data, setData] = useState({
     kodeHewan: "",
-    noKodeHewan: "",
+    // noKodeHewan: "",
     beratDaging: "",
     beratKulit: "",
     profileSummary: "",
     tanggalWaktu: "",
+    statusHewan: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   const { hewan } = useParams();
 
@@ -50,6 +53,7 @@ const AddData = ({ isEdit }) => {
   const handleSubmit = async () => {
     let validate = submitValidation();
     if (validate === true) {
+      setIsSubmitting(true);
       try {
         let postData = data;
         let unikId = new Date().getTime();
@@ -82,10 +86,12 @@ const AddData = ({ isEdit }) => {
           isClosable: true,
         });
         setTimeout(() => {
-          navigate(`/`);
-        }, 1000);
+          navigate(`/tabel-perhitungan`);
+        }, 500);
       } catch (err) {
         console.log(err);
+      } finally {
+        setIsSubmitting(false);
       }
     } else {
       toast({
@@ -184,18 +190,20 @@ const AddData = ({ isEdit }) => {
         <ProfileSummary data={data} handleChange={handleChange} />
         <div className="add-data__button">
           <Button
-            onClick={handleSubmit}
-            colorScheme="blue"
-            className="submit-button"
-          >
-            Submit
-          </Button>
-          <Button
-            onClick={() => navigate(`/`)}
+            onClick={() => navigate(`/tabel-perhitungan`)}
             colorScheme="yellow"
             className=""
           >
             Kembali
+          </Button>
+          <Button
+            onClick={handleSubmit}
+            colorScheme="blue"
+            className="submit-button"
+            isLoading={isSubmitting}
+            disabled={isSubmitting}
+          >
+            Submit
           </Button>
         </div>
       </div>

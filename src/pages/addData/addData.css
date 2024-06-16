@@ -60,6 +60,7 @@
 
 .add-data__button {
   display: flex;
+  gap: 20px;
   justify-content: center;
 }
 

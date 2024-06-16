@@ -1,0 +1,42 @@
+.pagination-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  height: 32px;
+}
+
+.pagination {
+  font-size: 14px;
+}
+
+.pagination__item {
+  width: 32px;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+.next {
+  margin-left: 12px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.previous {
+  margin-right: 12px;
+  margin-left: 4px;
+}
+
+@media (max-width: 340px) {
+  .pagination__item {
+    margin: 0 5px;
+  }
+}
