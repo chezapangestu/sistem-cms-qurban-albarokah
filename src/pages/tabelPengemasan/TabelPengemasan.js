@@ -224,20 +224,14 @@ const TabelPengemasan = () => {
     //   selector: (row) => row.beratKulit,
     //   sortable: true,
     {
-      name: (
-        <div style={{ fontSize: 20, fontWeight: 700 }}>Waktu pencatatan</div>
-      ),
-      selector: (row) => (
-        <div style={{ fontSize: 20 }}>{formatDateTime(row.tanggalWaktu)}</div>
-      ),
+      name: "Waktu pencatatan",
+      selector: (row) => formatDateTime(row.tanggalWaktu),
       sortable: true,
     },
     // },
     {
-      name: (
-        <div style={{ fontSize: 20, fontWeight: 700 }}>Jumlah Kresek (pcs)</div>
-      ),
-      selector: (row) => <div style={{ fontSize: 20 }}>{row.jumlahKresek}</div>,
+      name: "Jumlah Kresek (pcs)",
+      selector: (row) => row.jumlahKresek,
       sortable: true,
     },
     // { name: "First Name", selector: (row) => row.firstName, sortable: true },
@@ -245,7 +239,7 @@ const TabelPengemasan = () => {
     // { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
     // { name: "No Handphone", selector: (row) => row.phone, sortable: true },
     {
-      name: <div style={{ fontSize: 20, fontWeight: 700 }}>Action</div>,
+      name: "Action",
       id: "view",
       accessor: (str) => "view",
       cell: (row, index) => (

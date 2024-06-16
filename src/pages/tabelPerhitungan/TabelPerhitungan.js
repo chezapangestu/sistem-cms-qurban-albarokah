@@ -225,12 +225,8 @@ const TabelPerhitungan = () => {
       sortable: true,
     },
     {
-      name: (
-        <div style={{ fontSize: 20, fontWeight: 700 }}>Waktu pencatatan</div>
-      ),
-      selector: (row) => (
-        <div style={{ fontSize: 20 }}>{formatDateTime(row.tanggalWaktu)}</div>
-      ),
+      name: "Waktu pencatatan",
+      selector: (row) => formatDateTime(row.tanggalWaktu),
       sortable: true,
     },
     // { name: "First Name", selector: (row) => row.firstName, sortable: true },

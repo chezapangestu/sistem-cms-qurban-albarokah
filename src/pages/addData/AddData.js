@@ -19,7 +19,6 @@ const AddData = ({ isEdit }) => {
     beratKulit: "",
     profileSummary: "",
     tanggalWaktu: "",
-    statusHewan: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
