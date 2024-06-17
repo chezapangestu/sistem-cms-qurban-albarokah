@@ -98,6 +98,10 @@ const DataPreview = () => {
                 </p>
               </div>
               <div className="data-preview__item">
+                <label className="data-preview__label">Status Hewan</label>
+                <p className="data-preview__name">{data.statusHewan}</p>
+              </div>
+              <div className="data-preview__item">
                 <label className="data-preview__label">Note:</label>
                 <p className="data-preview__name">{data.profileSummary}</p>
               </div>

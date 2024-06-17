@@ -254,11 +254,11 @@ const TabelPerhitungan = () => {
       selector: (row) => formatDateTime(row.tanggalWaktu),
       sortable: true,
     },
-    {
-      name: "Status hewan",
-      selector: (row) => <StatusSpan status={row.statusHewan} />,
-      sortable: true,
-    },
+    // {
+    //   name: "Status hewan",
+    //   selector: (row) => <StatusSpan status={row.statusHewan} />,
+    //   sortable: true,
+    // },
     // { name: "Last Name", selector: (row) => row.lastName, sortable: true },
     // { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
     // { name: "No Handphone", selector: (row) => row.phone, sortable: true },
