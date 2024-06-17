@@ -201,6 +201,31 @@ const TabelPerhitungan = () => {
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
 
+  const StatusSpan = ({ status }) => {
+    let backgroundColor;
+    switch (status) {
+      case "Belum dipotong":
+        backgroundColor = "gray";
+        break;
+      case "Pengulitan":
+        backgroundColor = "red";
+        break;
+      case "Pencacahan":
+        backgroundColor = "blue";
+        break;
+      case "Onprogress":
+        backgroundColor = "yellow";
+        break;
+      case "Selesai":
+        backgroundColor = "green";
+        break;
+      default:
+        backgroundColor = "black";
+    }
+
+    return <span style={{ padding: "15px", backgroundColor }}>{status}</span>;
+  };
+
   const columns = [
     // {
     //   name: (
@@ -229,7 +254,11 @@ const TabelPerhitungan = () => {
       selector: (row) => formatDateTime(row.tanggalWaktu),
       sortable: true,
     },
-    // { name: "First Name", selector: (row) => row.firstName, sortable: true },
+    {
+      name: "Status hewan",
+      selector: (row) => <StatusSpan status={row.statusHewan} />,
+      sortable: true,
+    },
     // { name: "Last Name", selector: (row) => row.lastName, sortable: true },
     // { name: "Blok Rumah", selector: (row) => row.blokRumah, sortable: true },
     // { name: "No Handphone", selector: (row) => row.phone, sortable: true },

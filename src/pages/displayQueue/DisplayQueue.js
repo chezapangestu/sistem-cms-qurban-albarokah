@@ -201,6 +201,31 @@ const DisplayQueue = () => {
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
 
+  const StatusSpan = ({ status }) => {
+    let backgroundColor;
+    switch (status) {
+      case "Belum dipotong":
+        backgroundColor = "gray";
+        break;
+      case "Pengulitan":
+        backgroundColor = "red";
+        break;
+      case "Pencacahan":
+        backgroundColor = "blue";
+        break;
+      case "Onprogress":
+        backgroundColor = "yellow";
+        break;
+      case "Selesai":
+        backgroundColor = "green";
+        break;
+      default:
+        backgroundColor = "black";
+    }
+
+    return <span style={{ padding: "15px", backgroundColor }}>{status}</span>;
+  };
+
   const columns = [
     {
       name: <div style={{ fontSize: 20, fontWeight: 700 }}>Kode Hewan</div>,
@@ -235,6 +260,11 @@ const DisplayQueue = () => {
       selector: (row) => (
         <div style={{ fontSize: 20 }}>{formatDateTime(row.tanggalWaktu)}</div>
       ),
+      sortable: true,
+    },
+    {
+      name: <div style={{ fontSize: 20, fontWeight: 700 }}>Status hewan</div>,
+      selector: (row) => <StatusSpan status={row.statusHewan} />,
       sortable: true,
     },
   ];

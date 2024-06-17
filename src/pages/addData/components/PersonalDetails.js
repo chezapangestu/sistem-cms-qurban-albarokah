@@ -285,6 +285,26 @@ const PersonalDetails = ({ data, handleChange }) => {
           />
         </Col>
       </Row>
+      <Row className="row">
+        <Col lg="12">
+          <p className="add-data-section__title">Status Hewan</p>
+          <Select
+            placeholder="Pilih status hewan"
+            name="statusHewan"
+            value={data.statusHewan}
+            onChange={handleSelectChange}
+            variant="filled"
+            focusBorderColor="blue.500"
+          >
+            <option value="Belum dipotong">Belum dipotong</option>
+            <option value="Pengulitan">Pengulitan</option>
+            <option value="Pencacahan">Pencacahan</option>
+            <option value="Onprogress">Onprogress</option>
+            <option value="Selesai">Selesai</option>
+            {/* <option value="Membawa sendiri">Membawa sendiri</option> */}
+          </Select>
+        </Col>
+      </Row>
     </div>
   );
 };
